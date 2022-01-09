@@ -8,5 +8,8 @@ If you intend to move every note in the take, do not select any of them. Just ru
 Remember that first notes in continuous legato move have to be right on the desired beat. Repair them after running the script, or simply do not choose them before running the script.
 Script always marks the take with appropriate name suffix, so you know it was already patched (and also to make sure you do not run the script twice on some take).
 
+## CSS, CSSS and CSW simple legato
+If you want to use simple legato instead of advanced or expressive mode, take a look in the instrument PDF documentation and edit the times in ms at the beginning of the scripts.
+
 ## Drawbacks
-Since this script takes into account the BPM value, if you change BPM later, notes will be in wrong spots. There is also a problem if there is not a constant BPM used through playing the take. In such a situation I recommend splitting the MIDI item and patching the parts separately.
+Since these scripts take BPM value into account, if you change BPM later, notes will be in wrong spots. There is also a problem if there is not a constant BPM used through playing the take. In such a situation I recommend splitting the MIDI item and patching the parts separately. Or just move start of each note manually in some cases.
