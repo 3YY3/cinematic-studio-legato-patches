@@ -2,7 +2,7 @@
 [Reaper](https://www.reaper.fm/) patches for legato for [Cinematic Studio series](https://cinematicstudioseries.com/) Kontakt instruments.
 Intended for use with Advanced legato in CSS and CSSS, Expressive legato in CSW and for legato in CSB.
 
-¯\\_(ツ)  Use them to ease you life a little bit...
+¯\\_(ツ) *Use them to ease you life a little bit...*
 
 ## What is CSS, CSSS, CSW and CSB and why did I created the legato scripts?
 Cinematic Studio series instruments are great tools for making Cinematic music. These four NI Kontakt instruments cover Strings, Woodwinds and Brass in orchestra, including solo instruments in more that enough cases.
