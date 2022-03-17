@@ -18,7 +18,7 @@ function patchLegato()
   position = reaper.GetMediaItemInfo_Value(item, 'D_POSITION')
   offset = reaper.GetMediaItemTakeInfo_Value(take, 'D_STARTOFFS')
   qn = reaper.TimeMap2_timeToQN(nil, position - offset)
-  ppq = reaper.MIDI_GetPPQPosFromProjQN(take, qn + 1)
+  ppq = math.abs(reaper.MIDI_GetPPQPosFromProjQN(take, qn + 1))
   take_name = reaper.GetTakeName(take)
   bpm, bpi = reaper.GetProjectTimeSignature2()
   totalcnt, notecnt, cccnt = reaper.MIDI_CountEvts(take);

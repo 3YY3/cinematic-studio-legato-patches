@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Cinematic Studio Strings (CSS) and Solo Strings (CSSS) Advanced Legato Patcher
 CSS_advanced_legato_patcher.lua
 Copyright (c) 2022 3YY3, MIT License
@@ -18,11 +18,13 @@ function patchLegato()
   position = reaper.GetMediaItemInfo_Value(item, 'D_POSITION')
   offset = reaper.GetMediaItemTakeInfo_Value(take, 'D_STARTOFFS')
   qn = reaper.TimeMap2_timeToQN(nil, position - offset)
-  ppq = reaper.MIDI_GetPPQPosFromProjQN(take, qn + 1)
+  ppq = math.abs(reaper.MIDI_GetPPQPosFromProjQN(take, qn + 1))
   take_name = reaper.GetTakeName(take)
   bpm, bpi = reaper.GetProjectTimeSignature2()
   totalcnt, notecnt, cccnt = reaper.MIDI_CountEvts(take);
   sel_mode = false
+  
+  ppq = 960 -- PPQ value overrun
   
   if string.match(take_name, " #LEG") then
     reaper.ShowMessageBox("This take has already been patched for legato!", "Error", 0)
